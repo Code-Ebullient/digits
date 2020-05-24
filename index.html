@@ -8,21 +8,40 @@
      <link rel="stylesheet" href="css/main.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
 
+     <!-- Bootstrap & Icons CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     
      <title>Digits</title>
 
  </head>
  <body>
+     <div class="hamburger">
+        <i class="fas fa-bars"></i>
+     </div>
     <div class="outer_container upper">
         <!-- Nav -->
         <nav class="main_nav">
              <img src="img/logo.png" alt="" class="logo">
              
-             <ul class="main_menu">
+             <ul class="main_menu" id="menu_menu">
                  <li><a href="#">Home</a></li>
-                 <li><a href="#">Company</a></li>
-                 <li><a href="#">About</a></li>
-                 <li><a href="#">Portfolio</a></li>
-                 <li><a href="#">Testimony</a></li>
+                 <li><a href="#log">Company</a></li>
+                 <li><a href="#about_us">About</a></li>
+
+                 <!-- Dropdown section -->
+                 <li class="drop_down">
+                    <a href="#port">Portfolio<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"><span class="item-text">Pricing</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="#"><span class="item-text">Policy</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="#"><span class="item-text">Condition</span></a>
+                    </div>
+                </li>
+
+                 <!-- Dropdown ends-->
+                 <li><a href="#testimony">Testimony</a></li>
              </ul>
 
              <ul class="right_menu">
@@ -33,7 +52,7 @@
                     <button type="button" class=" btn btn-normal">Contact Us</button>
                 </li>
              </ul>
-         </nav>
+        </nav>
     </div>
 
     <div class=" outer_container inner">
@@ -51,9 +70,9 @@
          <!-- Hero ends-->
 
         <!-- Company logo section -->
-    <div class="logo_area">
+    <div class="logo_area" id="log">
             <p class="logo_text">Trusted by forward-thinking softward teams around the world</p>
-            <div class="logos">
+            <div class="logos" id="gos">
                 <img src="img/logo-1.png" class="logo1" alt="netflix">
                 <img src="img/logo-2.png" class="logo2" alt="drawkit">
                 <img src="img/logo-3.png" class="logo3" alt="figma">
@@ -66,7 +85,7 @@
         <!-- Company Ends -->
 
         <!-- About section -->
-    <section class="about_card">
+    <section class="about_card" id="about_us">
         <h2 class="about_title">Whatever work you do, </br>we're able to help</h2>
 
         <div class="about">
@@ -110,7 +129,7 @@
         <!-- About Ends -->
 
         <!-- Portfolio section -->
-        <div class="portfolio">
+        <div class="portfolio" id="port">
             <h2>Simplicity meets innovative design</h2>
             <p>It's really easy to start using Digits. </br> Install the theme, choose a demo and </br>start designing the future of your business!</p>
             <div class="portfolio_button">
@@ -122,7 +141,7 @@
 
         <!-- Testimony section -->
         <section>
-            <div class="item">
+            <div class="item" id="testimony">
                 <div class="testimonial_item">
                     <div class="content">
                         <p class="description">Completely beautiful website and </br>
@@ -179,14 +198,14 @@
     <!-- Call To Action Section Start -->
     <section id="cta" class="section-padding">
         <div class="cta-text">
-            <h3>Ready to launch </br>
+            <h2>Ready to launch </br>
                 your next website?
-            </h3>
+            </h2>
         </div>
 
         <div class="text-right">
-            </br><button class="btn btn-border"><i class="far fa-envelop"></i> Get in touch now</button>
-            <p>Or, take a peck inside our <a href="#">design studio</a></p>
+            </br><button class="btn btn-border"><i class="fas fa-envelop"></i> Get in touch now</button>
+            <p>Or, take a peck inside our <a href="#" class="std">design studio</a></p>
         </div>
     
     </section>
@@ -194,7 +213,7 @@
 
          <!-- Footer Section Start -->
     <footer id="footer" class="footer-area">
-            <div class="upper_footer">
+            <div class="upper_footer" id="upper_foot">
                     <div class="widget">
                         <img src="img/logo.png" alt="" class="footer_logo logo">
                         <div class="textwidget">
@@ -233,17 +252,17 @@
                         <ul class="address">
                                 <li>
                                     <div class="social-icon">
-                                        <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-                                        <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
-                                        <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
-                                        <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
+                                        <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="twitter" href="#"><i class="fab fa-twitter"></i></a>
+                                        <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
+                                        <a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="now">
                                     <a href="#"> Download now</a>
                                 </li>
-                                <li>
-                                    <a href="#"></i> Documentation</a>
+                                <li class="doc">
+                                    <a href="#">Documentation</a>
                                 </li>
                         </ul>
                         
@@ -263,6 +282,7 @@
             </div>   
     </footer> 
   <!-- Footer Section End -->
-     
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
  </body>
  </html>
